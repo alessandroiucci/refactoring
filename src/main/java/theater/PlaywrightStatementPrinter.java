@@ -74,8 +74,8 @@ public final class PlaywrightStatementPrinter {
             }
 
             // print line for this order
-            result.append(String.format("  %s: %s (%s seats)%n", play.getName(), frmt.format(thisAmount /
-                    Constants.PERCENT_FACTOR), p.getAudience()));
+            result.append(String.format("  %s: %s (%s seats)%n", play.getName(), frmt.format(thisAmount
+                    / Constants.PERCENT_FACTOR), p.getAudience()));
             totalAmount += thisAmount;
         }
         result.append(String.format("Amount owed is %s%n", frmt.format(totalAmount / Constants.PERCENT_FACTOR)));
