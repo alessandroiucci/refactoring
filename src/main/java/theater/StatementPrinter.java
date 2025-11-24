@@ -72,6 +72,11 @@ public class StatementPrinter {
         return getThisAmount(p, getPlays().get(p.getPlayID()));
     }
 
+    /**
+     * Returns the play associated with a given performance.
+     * @param p the performance
+     * @return the play
+     */
     public Play getPlay(Performance p) {
         return getPlays().get(p.getPlayID());
     }
