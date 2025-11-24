@@ -5,8 +5,8 @@ package theater;
  */
 public class Performance {
 
-    public String playID;
-    public int audience;
+    private String playID;
+    private int audience;
 
     public String getPlayID() {
         return playID;
