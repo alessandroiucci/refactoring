@@ -34,10 +34,10 @@ public class StatementPrinter {
 
         int volumeCredits = getTotalVolumeCredits();
 
-        StringBuilder result = new StringBuilder("Statement for " + getInvoice().getCustomer() + System.lineSeparator());
+        final StringBuilder result = new StringBuilder("Statement for " + getInvoice().getCustomer() + System.lineSeparator());
         for (Performance p : getInvoice().getPerformances()) {
-            Play play = getPlays().get(p.playID);
-            int thisAmount = getThisAmount(p, play);
+            final Play play = getPlays().get(p.playID);
+            final int thisAmount = getThisAmount(p, play);
             result.append(String.format("  %s: %s (%s seats)%n", play.name, usd(thisAmount), p.audience));
         }
         result.append(String.format("Amount owed is %s%n", usd(totalAmount)));
