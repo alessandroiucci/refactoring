@@ -62,6 +62,14 @@ public class StatementPrinter {
         return totalAmount;
     }
 
+    public int getAmount(Performance p) {
+        return getThisAmount(p, getPlays().get(p.playID));
+    }
+
+    public Play getPlay(Performance p) {
+        return getPlays().get(p.playID);
+    }
+
     private static int getVolumeCredits(Performance p, Play play) {
         int result = Math.max(p.audience - Constants.BASE_VOLUME_CREDIT_THRESHOLD, 0);
         if ("comedy".equals(play.type)) {
