@@ -49,8 +49,8 @@ public final class PlaywrightStatementPrinter {
                 case "tragedy":
                     thisAmount = Constants.TRAGEDY_BASE_AMOUNT;
                     if (p.getAudience() > Constants.TRAGEDY_AUDIENCE_THRESHOLD) {
-                        thisAmount += Constants.COMEDY_OVER_BASE_CAPACITY_AMOUNT * (p.getAudience() -
-                                Constants.TRAGEDY_AUDIENCE_THRESHOLD);
+                        thisAmount += Constants.COMEDY_OVER_BASE_CAPACITY_AMOUNT * (p.getAudience()
+                                - Constants.TRAGEDY_AUDIENCE_THRESHOLD);
                     }
                     break;
                 case "comedy":

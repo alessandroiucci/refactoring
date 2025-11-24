@@ -34,8 +34,8 @@ public class StatementPrinter {
 
         final int volumeCredits = getTotalVolumeCredits();
 
-        final StringBuilder result = new StringBuilder("Statement for " + getInvoice().getCustomer() +
-                System.lineSeparator());
+        final StringBuilder result = new StringBuilder("Statement for " + getInvoice().getCustomer()
+                + System.lineSeparator());
         for (Performance performance : getInvoice().getPerformances()) {
             final Play play = getPlays().get(performance.getPlayID());
             final int thisAmount = getThisAmount(performance, play);
@@ -66,7 +66,6 @@ public class StatementPrinter {
 
     /**
      * Returns the amount for a given performance.
-     * @param p the performance
      * @return the amount for this performance
      */
     public int getAmount(Performance p) {
@@ -75,7 +74,6 @@ public class StatementPrinter {
 
     /**
      * Returns the play associated with a given performance.
-     * @param p the performance
      * @return the play
      */
     public Play getPlay(Performance p) {
@@ -96,8 +94,8 @@ public class StatementPrinter {
             case "tragedy":
                 thisAmount = Constants.TRAGEDY_BASE_AMOUNT;
                 if (performance.getAudience() > Constants.TRAGEDY_AUDIENCE_THRESHOLD) {
-                    thisAmount += Constants.TRAGEDY_OVER_BASE_CAPACITY_PER_PERSON *
-                            (performance.getAudience() - Constants.TRAGEDY_AUDIENCE_THRESHOLD);
+                    thisAmount += Constants.TRAGEDY_OVER_BASE_CAPACITY_PER_PERSON
+                            * (performance.getAudience() - Constants.TRAGEDY_AUDIENCE_THRESHOLD);
                 }
                 break;
             case "comedy":
