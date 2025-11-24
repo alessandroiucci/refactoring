@@ -66,18 +66,20 @@ public class StatementPrinter {
 
     /**
      * Returns the amount for a given performance.
+     * @param performance the performance of play
      * @return the amount for this performance
      */
-    public int getAmount(Performance p) {
-        return getThisAmount(p, getPlays().get(p.getPlayID()));
+    public int getAmount(Performance performance, Play play) {
+        return getThisAmount(performance, getPlays().get(performance.getPlayID()));
     }
 
     /**
      * Returns the play associated with a given performance.
+     * @param performance the performance of play
      * @return the play
      */
-    public Play getPlay(Performance p) {
-        return getPlays().get(p.getPlayID());
+    public Play getPlay(Performance performance) {
+        return getPlays().get(performance.getPlayID());
     }
 
     private static int getVolumeCredits(Performance performance, Play play) {
