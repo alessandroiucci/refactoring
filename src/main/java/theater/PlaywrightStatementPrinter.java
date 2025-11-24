@@ -16,6 +16,10 @@ public class PlaywrightStatementPrinter {
         this.plays = plays;
     }
 
+    public static PlaywrightStatementPrinter build(Invoice invoice, Map<String, Play> plays) {
+        return new PlaywrightStatementPrinter(invoice, plays);
+    };
+
     /**
      * Returns a formatted statement of the invoice associated with this printer.
      * @return the formatted statement
