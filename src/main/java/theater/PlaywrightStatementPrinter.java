@@ -24,6 +24,13 @@ public final class PlaywrightStatementPrinter {
         return plays;
     }
 
+    /**
+     * Factory method to create a new PlaywrightStatementPrinter instance.
+     *
+     * @param invoice the invoice to be used by the printer
+     * @param plays   the map of plays used by the printer
+     * @return a new instance of PlaywrightStatementPrinter
+     */
     public static PlaywrightStatementPrinter build(Invoice invoice, Map<String, Play> plays) {
         return new PlaywrightStatementPrinter(invoice, plays);
     }
