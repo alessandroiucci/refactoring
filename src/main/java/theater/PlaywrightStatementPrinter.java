@@ -11,7 +11,7 @@ public class PlaywrightStatementPrinter {
     public Invoice invoice;
     public Map<String, Play> plays;
 
-    public PlaywrightStatementPrinter(Invoice invoice, Map<String, Play> plays) {
+    private PlaywrightStatementPrinter(Invoice invoice, Map<String, Play> plays) {
         this.invoice = invoice;
         this.plays = plays;
     }
