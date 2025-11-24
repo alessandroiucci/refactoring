@@ -8,12 +8,20 @@ import java.util.Map;
  * This class generates a statement for a given invoice of performances.
  */
 public class StatementPrinter {
-    public Invoice invoice;
-    public Map<String, Play> plays;
+    private final Invoice invoice;
+    private final Map<String, Play> plays;
 
     public StatementPrinter(Invoice invoice, Map<String, Play> plays) {
         this.invoice = invoice;
         this.plays = plays;
+    }
+
+    public Invoice getInvoice() {
+        return invoice;
+    }
+
+    public Map<String, Play> getPlays() {
+        return plays;
     }
 
     /**
@@ -24,12 +32,12 @@ public class StatementPrinter {
     public String statement() {
         int totalAmount = 0;
         int volumeCredits = 0;
-        StringBuilder result = new StringBuilder("Statement for " + invoice.getCustomer() + System.lineSeparator());
+        StringBuilder result = new StringBuilder("Statement for " + getInvoice().getCustomer() + System.lineSeparator());
 
         NumberFormat frmt = NumberFormat.getCurrencyInstance(Locale.US);
 
-        for (Performance p : invoice.getPerformances()) {
-            Play play = plays.get(p.playID);
+        for (Performance p : getInvoice().getPerformances()) {
+            Play play = getPlays().get(p.playID);
 
             int thisAmount = 0;
             switch (play.type) {
