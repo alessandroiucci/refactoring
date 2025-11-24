@@ -67,6 +67,7 @@ public class StatementPrinter {
     /**
      * Returns the amount for a given performance.
      * @param performance the performance of play
+     * @param play the play
      * @return the amount for this performance
      */
     public int getAmount(Performance performance, Play play) {
