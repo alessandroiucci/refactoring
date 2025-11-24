@@ -63,6 +63,11 @@ public class StatementPrinter {
         return totalAmount;
     }
 
+    /**
+     * Returns the amount for a given performance.
+     * @param p the performance
+     * @return the amount for this performance
+     */
     public int getAmount(Performance p) {
         return getThisAmount(p, getPlays().get(p.getPlayID()));
     }
